@@ -1,0 +1,1 @@
+In chat prompt guidelines for requesting ads. Privacy anti fraud.
