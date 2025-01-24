@@ -59,7 +59,7 @@ The repository is organized into the following key directories:
 
 Our focus areas include, but are not limited to:
 
-- **Ad Integration Protocols** – Seamless interaction of AI agents with ad servers and exchanges.
+- **Communication Protocols** – Seamless interaction of AI agents with ad servers and exchanges.
 - **Permissioned Advertising** – Ensuring that AI ads are served only to users who have given explicit consent and are actively requesting Ads.
 - **Privacy & Compliance** – Aligning with GDPR, CCPA, and ethical AI guidelines.
 - **Anti-Fraud Principles** - Creating frameworks to keep AI Ads away from fraudulent activities.
@@ -118,5 +118,3 @@ Our work is inspired and supported by the foundational efforts of industry leade
 - 📖 [GDPR Guidelines](https://gdpr.eu/)
 - 📖 [CCPA Regulations](https://oag.ca.gov/privacy/ccpa)
 - 📖 [Ethical AI Guidelines](https://www.un.org/en/ethics/ethical-ai)
-
-Let me know if you'd like any changes or additional details!
