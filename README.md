@@ -7,7 +7,7 @@
 </h3>
 <div align="center">
 <a href="https://GitHub.com/ADS4GPTs/ads4gpts-openstandards/graphs/contributors">
-  <img src="https://img.shields.io/github/contributors/ADS4GPTs/ads4gpts.svg" alt="GitHub Contributors">
+  <img src="https://img.shields.io/github/contributors/ADS4GPTs/ads4gpts-openstandards.svg" alt="GitHub Contributors">
 </a>
 <a href="https://ads4gpts.com">
   <img src="https://img.shields.io/badge/Visit-ads4gpts.com-orange" alt="Visit ads4gpts.com">
