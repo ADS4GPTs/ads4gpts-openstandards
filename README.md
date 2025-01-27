@@ -44,6 +44,30 @@ Integration Repository: [![GitHub Stars](https://img.shields.io/github/stars/ADS
 
 ---
 
+## 🧠 Philosophy
+
+The digital media landscape is shifting from static content to AI-driven interactions through chatbots, autonomous agents, and dynamic applications, requiring a reevaluation of traditional advertising protocols that rely on user tracking and invasive data collection. At ADS4GPTs, the focus is on transforming the advertising landscape alongside these shifts, moving from static digital content to AI applications, chatbots, and agents. Traditional protocols no longer meet the needs of such autonomous systems, so this project builds on permissioned marketing and takes it further by integrating advanced AI technologies with established standards.
+
+Not only AI Native applications can benefit from the ADS4GPTs architecture. Even traditional media and digital Ad placements can adopt our philosophy and approach.
+
+ADS4GPTs introduces a paradigm shift in digital advertising by:
+
+- Leveraging AI to understand user intent rather than tracking behavior
+- Implementing permissioned marketing principles at the protocol level
+- Enabling contextual ad matching without compromising privacy
+- Creating standardized interfaces between AI systems and ad networks
+
+### Core Architectural Evolution
+
+Below is a visual representation of the evolution from traditional advertising architectures to our new AI-driven approach:
+
+![Old vs New Architecture](Drafts/img/newvsold.png)
+
+- **Old Architecture**: Supply side provides an impression request with as much invasive information that it seems highly valuable from the demand side and bid high.
+- **New Architecture**: Supply side understands the needs of the user and requests the relevant Ads from the available advertisers. 
+
+---
+
 ## 📂 Repository Structure
 
 The repository is organized into the following key directories:
