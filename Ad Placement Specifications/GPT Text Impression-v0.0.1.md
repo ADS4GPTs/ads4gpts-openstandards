@@ -57,7 +57,7 @@ The following example shows possible values for each field in the GPT Ad Impress
     "placement_id": "string",           // Unique placement/opportunity ID
     "version": "1.0",                   // Schema version
     "context": "chat|assistant|other",  // Environment in which ad will appear
-    "placement_type": "inline|overlay|suggested",
+    "placement_type": "inline|suggested",
 
     "minimum_bid": "number",                // Minimum bid floor for this placement
 
@@ -130,7 +130,7 @@ The following example shows possible values for each field in the GPT Ad Impress
      - **`full`**: The ad content can be rephrased or adapted entirely to match the chat’s tone, brand, or style guidelines (subject to advertiser permissions).
 
 8. **`metadata`**  
-   - **`tags`**: Simple string tags describing the nature of the placement or intended ad context (e.g., “discount,” “holiday-sale”).  
+   - **`tags`**: Simple string tags.
    - **`custom_fields`**: Additional metadata for brand safety, content rating, or any proprietary flags needed by the AI platform or AdTech partners.
 
 ---
@@ -217,9 +217,7 @@ Below is how a request might look when the AI application is ready to fill a tex
         "contentRating": "G"
       }
     }
-  },
-  "device": { ... },
-  "user": { ... }
+  }
 }
 ```
 
@@ -277,7 +275,9 @@ Publishers or SSPs can embed the GPT Ad Impression within OpenRTB's extensibilit
                 // ... other fields as defined above
             }
         }
-    }]
+    }],
+    "device": { ... },
+    "user": { ... }
 }
 ```
 
@@ -350,23 +350,3 @@ Example of GPT-specific fields in OpenRTB:
 
 This hybrid approach enables gradual adoption while maintaining compatibility with existing AdTech infrastructure.
 
----
-
-
-# 4. Final Thoughts
-
-The **GPT Ad Impression Schema** is purpose-built for **AI chat and LLM-driven** advertising:
-
-1. **Why a New Schema?**  
-   - Legacy specs revolve around banner, display, or multi-asset native ads. GPT Ads are strictly textual, conversation-driven, and revolve around minimal intrusion with high transparency.
-
-2. **Key Differentiators**  
-- **Mandating Disclosure**: No field to toggle—disclosure is always on.  
-- **Offering Monetization Control**: Through the `minimum_bid` floor.  
-- **Allowing or Forbidding Blending**: With a clear `blending_option` field.  
-- **Eliminating Unnecessary Fields**: E.g., `frequency_cap` is removed for simpler concurrency management.  
-
-3. **Backwards Compatibility**  
-   - Though the new schema stands on its own, it can be **embedded** into OpenRTB structures (e.g., `imp.ext`) for those requiring transitional workflows. A partial mapping to OpenRTB Native is possible, though not recommended for fully AI-first solutions.
-
-The net result is a **clean, AI-centric** blueprint for text-based ad placements, ensuring clarity for all parties—**publisher, advertiser,** and **end user**—while providing enough flexibility to handle advanced scenarios in next-generation GPT or chat environments.

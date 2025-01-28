@@ -27,7 +27,7 @@ This specification outlines a standardized format for delivering GPT text advert
 
 ### Key Characteristics
 1. **Textual Only Content:** May include optional CTA or short URL. Text format is Markdown. 
-2. **No Imagery:** Purely chat like feel.  
+2. **No Imagery:** Purely chat.  
 3. **Separated from Application Content**: In purely text applications this means the Ad should start after a line break.
 3. **Clearly Marked as Sponsored Content**: Must contain the label such as “Sponsored,” “Ad,” or “Promoted.”  
 4. **Lightweight Tracking:** One tracking pixel or server-to-server logging for impressions/clicks.
@@ -59,7 +59,6 @@ Below is an expanded specification following the **IAB New Ad Portfolio** struct
 
 **Placement Rules**
 - **Contextual Placement:** Ads appear at natural conversation breaks after the last AI message. Never inject an GPT Ad into the AI response.
-- **Frequency Capping:** Suggested best practice is to limit GPT ads to one for every 2-5 user queries or as platform context dictates.
 
 **Ad Rendering**
 - **Styling:** Should not be distracting to the User taking away from the Experience.   
