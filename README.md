@@ -66,6 +66,29 @@ Below is a visual representation of the evolution from traditional advertising a
 - **Old Architecture**: Supply side provides an impression request with as much invasive information that it seems highly valuable from the demand side and bid high.
 - **New Architecture**: Supply side understands the needs of the user and requests the relevant Ads from the available advertisers. 
 
+With GPT Ads and AI agents becoming the new interface for interacting with the Internet, the existing AdTech ecosystem is poised for significant transformation. Here's how we envision the transformation:
+
+### Supply-Side Platforms (SSPs)
+- Evolve into AI integration hubs
+- Develop proprietary Ad Agents and offer them as a Service
+- Focus on daily operational support
+- Aggregate intelligence from Ad Agent interactions
+- Minimum bid optimization
+
+### Demand-Side Platforms (DSPs) 
+- Optimize bidding mechanisms for AI environments
+- Provide real-time performance analytics
+- Bidding and budget optimization
+
+### Ad Exchanges 
+- Establish trust frameworks for AI-driven exchanges
+- Support seamless advertiser-AI communication
+
+
+In the following architectural diagram you see a version of this vision:
+
+![Old vs New Architecture](Drafts/img/ADS4GPTs%20general%20architecture.png)
+
 ---
 
 ## 📂 Repository Structure
