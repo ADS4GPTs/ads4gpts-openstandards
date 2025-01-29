@@ -1,1 +1,0 @@
-This is the part that the Chat Ad Response is mapped into the Rendered format.

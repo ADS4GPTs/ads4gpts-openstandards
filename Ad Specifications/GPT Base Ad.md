@@ -1,4 +1,4 @@
- ADS4GPTs Base Ad Specification
+ADS4GPTs Base Ad Specification
 
 ## 1. Introduction
 
@@ -39,8 +39,11 @@ The following core fields are **required for every ad** in ADS4GPTs. Some fields
 | **ad_type**       | The format or category of the ad (e.g., `text`, `image`, `video`)                | `string`  | Yes         | Guides how `ad_data` is interpreted                                               |
 | **ad_data**       | An object containing the **format-specific** fields (text copy, images, video, etc.)  | `object`  | Yes         | **Varies by `ad_type`**. For example, text ads vs. image ads have different fields|
 | **metadata**      | Additional data for targeting, analytics, or other custom fields                 | `object`  | No          | Use for advanced features; can be empty if not used                               |
+| **blend**         | Indicates if the rendered ad should be blended with the context and how much     | `string`  | No          | `"none"`, `"partial"`, or `"full"`. If partial or full, text can be re-styled or reworded to match GPT. |
 
 ### 3.1 Field Definitions
+
+-### 3.1 Field Definitions
 
 - **version**  
   - **Purpose:** Controls backward or forward compatibility. 
@@ -70,6 +73,12 @@ The following core fields are **required for every ad** in ADS4GPTs. Some fields
   - **Purpose:** Provides optional data for advanced use cases (e.g., retargeting tags, user segments, frequency capping, geo-info).
   - **Structure:** Typically a JSON object with key-value pairs.
 
+- **blend**  
+  - **Purpose:** Indicates if the rendered ad should be blended with the context and how much.
+  - **Example Values:** `"none"`, `"partial"`, `"full"`.
+  - **Usage:** If partial or full, text can be re-styled or reworded to match GPT.
+  - **Structure:** Typically a JSON object with key-value pairs.
+
 ---
 
 ## 4. Example JSON (Base)
@@ -84,7 +93,8 @@ Below is a basic JSON object conforming to the Base Ad Specification. Note that 
   "disclosure_label": "Sponsored",
   "ad_type": "text",
   "ad_data": {},
-  "metadata": {}
+  "metadata": {},
+  "blend": "none"
 }
 ```
 
@@ -101,5 +111,5 @@ When introducing a new ad format (e.g., **Text Ads** or **Video Ads**), you buil
 
 1. Declaring `ad_type` = `"text"`, `"banner"`, or `"video"`.  
 2. **Defining** additional properties within `ad_data` that are relevant to that format (e.g., `headline`, `body` for text ads; `video_url`, `thumbnail` for video ads).  
-3. Ensuring you do **not conflict** with existing base fields (e.g., do not override `ad_type` with a different meaning).  
+3. Ensuring you do **not conflict** with existing base fields (e.g., do not override `ad_type` with a different meaning).
 
