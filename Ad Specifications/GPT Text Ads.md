@@ -50,7 +50,7 @@ Below is an expanded specification following the **IAB New Ad Portfolio** struct
 | **Disclosure Label**  | Required label for sponsored content followed by a line break.                     | 10–25                  | Yes         | E.g., “Ad,” “Sponsored.” May appear at the beginning or end of the message, or as a separate label element.                                                                                                    |
 | **Call to Action (CTA)** | A short prompt or link text (optional).                                           | 25–35                  | No          | Examples: “Learn More,” “Get Offer,” “Shop Now.” If the chat environment supports clickable text, it may be hyperlinked or appended as a short URL.                                                            |
 | **CTA URL**           | Shortened link or deep link.                                                        | 25–50 (typical short URL) | No          | Must comply with platform link formatting. Use https for encryption. It is bundled in markdown with CTA.
-| **Blend**             | Indicates if the ad content should be adapted to blend into the chat conversation or kept as is. | Binary (Yes/No)         | Yes         | If set to "Yes," the ad content should be adapted to match the chat's tone and style. If "No," the ad content remains unchanged.                                                                                 |                                                                                                             |
+| **Blend**             | Indicates if the ad content should be adapted to blend into the chat conversation or kept as is. | string none/partial/full         | Yes         |       "none": Ad remains distinct from chat style, "partial": Some style blending or minimal rewriting, "full": The ad can be adapted to match the AI chat's tone or format .                                                                                 |                                                                                                             |
 | **Metadata** | Object with useful information for Ad Optimization                                 | –                       | No          | Similar to the ext object of OpenRTB protocol.                                                                                                                                                                 |
 
 ---
@@ -91,16 +91,3 @@ Below is an expanded specification following the **IAB New Ad Portfolio** struct
 **Ad Rendering**
 
 There is a need to transform the JSON schema of the GPT Text Ad spec into markdown that can be done in various ways. One way would be to synthesise the Ad deterministically by weaving the headline, body, cta and cta_url elements. Another way would be to pass it through another AI to blend the text seamlessly into the conversation. For the latter we give detailed guidelines in the GPT Text Ad Delivery Prompt Principles.
-
----
-
-## Summary
-
-**GPT / Conversation Text Ads** offer a **lightweight, native-like** format that blends into messaging platforms while upholding the **IAB New Ad Portfolio**’s LEAN principles. This specification ensures:
-
-- **Minimal Disruption:** Ads appear as standard chat messages, with clear labeling.  
-- **High Transparency:** Users instantly see they are viewing a sponsored message.  
-- **Performance Efficiency:** Negligible initial load impact and minimal resource usage.  
-- **Consistency:** Aligns with broader IAB guidelines on respectful, user-friendly digital advertising experiences.
-
-Publishers and chat-platform developers can adopt these recommendations to standardize GPT ad placements—balancing monetization with user experience in **dynamic, real-time messaging** environments.

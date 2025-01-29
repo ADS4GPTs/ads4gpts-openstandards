@@ -23,7 +23,6 @@ Here is the generic schema of a GPT Ad Impression object:
 {
     "gpt_ads_placement": {
         "placement_id": "string",
-        "version": "string",
         "context": "string",
         "placement_type": "string",
         "minimum_bid": "number",
@@ -55,7 +54,6 @@ The following example shows possible values for each field in the GPT Ad Impress
 {
   "gpt_ads_placement": {
     "placement_id": "string",           // Unique placement/opportunity ID
-    "version": "1.0",                   // Schema version
     "context": "chat|assistant|other",  // Environment in which ad will appear
     "placement_type": "inline|suggested",
 
@@ -93,25 +91,22 @@ The following example shows possible values for each field in the GPT Ad Impress
 
 ## Explanation of Fields
 
-1. **`placement_id`**  
+**`placement_id`**  
    - A unique string or UUID that identifies this specific ad opportunity.
 
-2. **`version`**  
-   - The schema version for backward/forward compatibility within ADS4GPTs.
-
-3. **`context`**  
+**`context`**  
    - Describes the general environment, such as `"chat"`, `"assistant"`, or any other applicable AI-driven interface.
 
-4. **`placement_type`**  
+**`placement_type`**  
    - **`inline`**: Placed directly in the conversation flow.  
    - **`overlay`**: Overlaid on top of or near the chat interface.  
    - **`suggested`**: Inserted as a suggestion or recommendation block.
 
-5. **`minimum_bid`**  
+**`minimum_bid`**  
    - The **bid floor** for this impression (e.g., `0.10` denotes a $0.10 floor).  
    - Useful in auctions to signal that bids below this value are not acceptable.
 
-6. **`text_requirements`** (object)  
+**`text_requirements`** (object)  
    - **`headline_max_length`**: The maximum number of characters for the ad’s headline.  
    - **`body_max_length`**: The maximum number of characters for the main ad text.  
    - **`disclosure_position`**: Where the mandatory sponsor label (e.g., “Sponsored” or “Ad”) appears. Options:  
@@ -123,13 +118,13 @@ The following example shows possible values for each field in the GPT Ad Impress
 
    > **Note**: Disclosure is **always required** under ADS4GPTs. The only variable is where it appears (`disclosure_position`).
 
-7. **`blending_option`**  
+**`blending_option`**  
    - Controls if the ad text can mimic or blend into the AI platform’s style or tone. Possible values:  
      - **`none`**: The ad should remain visually/textually distinct.  
      - **`partial`**: Minimal style adjustments (e.g., tone, language) to fit the chat context.  
      - **`full`**: The ad content can be rephrased or adapted entirely to match the chat’s tone, brand, or style guidelines (subject to advertiser permissions).
 
-8. **`metadata`**  
+**`metadata`**  
    - **`tags`**: Simple string tags.
    - **`custom_fields`**: Additional metadata for brand safety, content rating, or any proprietary flags needed by the AI platform or AdTech partners.
 
@@ -199,7 +194,6 @@ Below is how a request might look when the AI application is ready to fill a tex
 {
   "gpt_ads_placement": {
     "placement_id": "GPT-PL-001",
-    "version": "1.0",
     "context": "chat",
     "placement_type": "inline",
     "minimum_bid": 0.25,
@@ -271,7 +265,6 @@ Publishers or SSPs can embed the GPT Ad Impression within OpenRTB's extensibilit
         "ext": {
             "gpt_ads_placement": {  // Our schema goes here
                 "placement_id": "GPT-001",
-                "version": "1.0",
                 // ... other fields as defined above
             }
         }
