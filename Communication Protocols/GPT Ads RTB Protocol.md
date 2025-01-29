@@ -489,7 +489,7 @@ For more information about the GPT Text Ad read more in the [documentation](../A
 
               "media": {
                 // GPT Text Ad: Inline text ad structure
-                "gpt_text_ad": {
+                "ad": {
                   "ad_identifier": "TXT-AD-0001",
                   "advertiser_name": "SampleBrand",
                   "headline": "Upgrade Your Home Office!",
