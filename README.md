@@ -28,11 +28,14 @@
 
 ## 🚀 Mission
 
+Our goal is to change the narrative of Programmatic Advertising. Currently, the demand side holds all the decision-making power, while the supply side only provides information about their users and placements. This dynamic leads to undesired behaviors such as user privacy invasion and fraud, as publishers attempt to make their placements more enticing to attract high bids. By flipping the script and enabling the supply side to use their rich data securely and privately with the help of AI to make ad recommendations, we strive to balance the decision-making power between the supply and demand.
+
 **ADS4GPTs - Open Standards**  provides a robust foundation for AI-driven advertising by:
 
 - Establishing AI-focused Ad specifications.
 - Defining protocols to ensure seamless AI-advertiser interactions.
 - Outlining conceptual frameworks for ad delivery, measurement, and compliance in AI environments.
+
 
 ### Show Your Support
 
