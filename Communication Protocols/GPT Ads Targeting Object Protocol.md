@@ -1,4 +1,4 @@
-**gpt_ads_targeting_object: protocol_specification**  
+# GPT Ads Targeting Object: Protocol Specification
 *version 0.0.1 – january 28, 2025*
 
 ---
