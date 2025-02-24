@@ -14,6 +14,7 @@
     - 3.4 [undesired_ads](#34-undesired_ads)  
     - 3.5 [context](#35-context)  
     - 3.6 [num_ads](#36-num_ads)  
+    - 3.7 [style](#37-style)  
 4. [Categorical Fields](#4-categorical-fields)  
     - 4.1 [gender](#41-gender)  
     - 4.2 [age_range](#42-age_range)  
@@ -51,7 +52,8 @@ The gpt_ads_targeting_object consists of a simple JSON structure:
   "ad_recommendation": "string",
   "undesired_ads": "string",
   "context": "string",
-  "num_ads": "integer"
+  "num_ads": "integer",
+  "style": "string"
 }
 ```
 
@@ -62,6 +64,7 @@ Where:
 - **undesired_ads**: A free-text or enumerated reference to ads the user does not wish to see.
 - **context**: A summary of the context the ad is going to be in.
 - **num_ads**: The number of ads desired.
+- **style**: The style description of the AI application, defaults to "neutral".
 
 ---
 
@@ -105,6 +108,11 @@ Where:
 - **type**: `integer`  
 - **description**: The number of ads desired.  
 - **example**: `3`
+
+### 3.7 style  
+- **type**: `string`  
+- **description**: The style description of the AI application, defaults to "neutral".  
+- **example**: `"neutral"`
 
 ---
 
@@ -164,7 +172,8 @@ When integrating into standard OpenRTB workflows, the gpt_ads_targeting_object c
         "ad_recommendation": "budget airline promos, hiking gear discounts, local travel insurance offers",
         "undesired_ads": "luxury travel packages, gambling",
         "context": "user browsing travel blogs",
-        "num_ads": 3
+        "num_ads": 3,
+        "style": "neutral"
      }
   }
 }
@@ -175,6 +184,7 @@ When integrating into standard OpenRTB workflows, the gpt_ads_targeting_object c
 3. **ad_recommendation** & **undesired_ads**: Passed in free-text form for the DSP to interpret.  
 4. **context**: Provides context for the ad placement.
 5. **num_ads**: Specifies the number of ads desired.
+6. **style**: Describes the style of the AI application, defaults to "neutral".
 
 The demand-side platform (DSP) can parse `ext.gpt_targeting` to tailor bidding decisions and creative selection accordingly, *while remaining compatible with standard IAB frameworks*.
 
@@ -215,6 +225,8 @@ Below is a direct JSON example, **outside** an RTB bid request structure:
   "ad_recommendation": "organic yoga mats, sustainable fitness apparel",
   "undesired_ads": "gambling, dietary supplements, extravagant luxury goods",
   "context": "user browsing fitness blogs",
-  "num_ads": 2
+  "num_ads": 2,
+  "style": "neutral"
 }
 ```
+
